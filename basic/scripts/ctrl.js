@@ -4,31 +4,34 @@ function TodoController() {
   const vm = this;
   vm.toDoList = [ {
     task: "Walk the dog.",
-    completed: false
+    classes:{completed: false}
   },
 
   {
     task: "Go to the store.",
-    completed: true
+    classes:{completed: true}
   },
 
   {
     task: "Get gas.",
-    completed: false
+    classes:{completed: false}
   },
 
   {
     task: "Wash the car",
-    completed: false
+    classes:{completed: false}
   }
 
   ]
+
+  // Creates line Through list -----------//
+  vm.completed= (index) => {
+    vm.toDoList[index].classes = {completed: true};
+  }
   
 }
 
-
-{
+//Finds the Module---//
 angular
     .module("ToDoApp")
     .controller("TodoController", TodoController);
-}
