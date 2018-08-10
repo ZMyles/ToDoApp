@@ -16,7 +16,10 @@
             <h1>TODO list</h1>
             <span>A place to store the things you have to do!</span>
             <input type="text" placeholder="Filter your to-dos">
-            <p ng-repeat="item in display.TodoController() track by $index">{{item}}</p>
+            <ol>
+                <li ng-repeat="item in display.toDoList">{{item.task}} {{item.completed}}</li>
+            </ol>
+            
             <input type="text" placeholder="Add your to do">
             <button class="addButton">Add</button>
         </form>

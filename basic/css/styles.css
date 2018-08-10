@@ -14,7 +14,7 @@ body{
 
 form {
   background: white;
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
   padding: 20px;
   border-radius: 5px;
@@ -52,4 +52,8 @@ input {
 }
 .addButton:hover {
   background: #ff69b4;
+}
+
+li{
+  margin: 20px;
 }
