@@ -18,11 +18,12 @@
             <input type="text" placeholder="Filter your to-dos">
             <ol>
                 <!-- Displays List Items form Array-->
-                <li ng-repeat="item in display.toDoList" ng-class="item.classes"><button class="completedBtn" ng-if="!item.classes.completed">Completed</button>{{item.task}} <div class="X">X</div></li>
+                <li ng-repeat="item in display.toDoList" ng-class="item.classes"><button class="completedBtn" ng-if="!item.classes.completed" ng-click="display.completed($index, item.completed)">Completed</button>{{item.task}} <div class="X" ng-click="display.removeTask();">X</div></li>
+                <input type="text" placeholder="Add your to do" ng-model="task">
             </ol>
             
-            <input type="text" placeholder="Add your to do">
-            <button class="addButton">Add</button>
+            
+            <button class="addButton" ng-click="display.addTask(task); task=''">Add</button>
         </form>
 
     </section>

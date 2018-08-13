@@ -21,14 +21,24 @@ function TodoController() {
     task: "Wash the car",
     classes:{completed: false}
   }
-
   ]
 
   // Creates line Through list -----------//
-  vm.completed= (index) => {
+  vm.completed= (index, completed) => {
     vm.toDoList[index].classes = {completed: true};
   }
-  
+  //--Removes Listed item ---//
+  vm.removeTask= (index) => {
+    vm.toDoList.splice(index, 1);
+  }
+  //-- Adds Item to list ----//
+  vm.addTask= (newTask) => {
+    vm.toDoList.push({
+      task: newTask,
+      classes:{completed: false}
+    });
+    
+  }
 }
 
 //Finds the Module---//

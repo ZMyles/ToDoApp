@@ -38,7 +38,8 @@ input {
   border-radius: 5px;
   border: solid 1px #eee;
   padding: 5px;
-  color: #eee;
+  width: 90%;
+  color: black;
 }
 
 .addButton {
@@ -69,9 +70,9 @@ li{
  
 }
 
-.X:hover{
-  color: #eee;
-}
+/* .X:hover{
+  color: red;;
+} */
 
 
 /*-------------------------*/
@@ -87,4 +88,13 @@ li{
 
 .completed {
   text-decoration: line-through;
+}
+
+li:hover > .X {
+  color: red;
+}
+
+li:hover  {
+  background: gray;
+  /* height: 30px; */
 }
